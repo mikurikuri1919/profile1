@@ -1,0 +1,134 @@
+@use '../globals' as *;
+@use '../parts/common' as *;
+
+.header {
+  padding: 7px 0 7px 0;
+  &__inner {
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    @include mq(md) {
+      align-items: center;
+    }
+    width: 100%;
+    margin: 0 auto;
+    max-width: 650px;
+    @include mq(lg) {
+      max-width: 830px;
+    }
+    }
+  &__img {
+    max-width: 125px;
+  }
+  &__ul {
+    list-style: none;
+    display: flex;
+  }
+  &__li {
+    margin: 10px;
+  }
+}
+
+.hero {
+  text-align: center;
+  @extend .mb-sm;
+
+  & > img {
+    width: 100%;
+    max-width: 1920px;
+    height: 600px;
+    object-fit: cover;
+  }
+}
+.about {
+  text-align: center;
+
+  &__title {
+    @extend .mb-sm;
+    font-size: 2rem;
+    display: inline-block;
+    border-bottom: solid 1px #383e45;
+  }
+  &__container {
+    @extend .mb-sm;
+    margin: 0 auto;
+    max-width: 575px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+
+    @include mq(md) {
+      flex-direction: row;
+  }
+  }
+  &__img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-right: 30px; 
+    @include mq(md) {
+      // @extend .mb-sm;
+    }
+  }
+  &__text {
+    text-align: left;
+    font-size: 1rem;
+    margin: 10px 0;
+  }
+  &__name {
+    margin-bottom: 20px;
+  }
+}
+
+.bicycle {
+  text-align: center;
+
+  &__title {
+    @extend .mb-sm;
+    font-size: 2rem;
+    display: inline-block;
+    border-bottom: solid 1px #383e45;
+  }
+  &__container {
+    width: 90%;
+    margin: 0 auto;
+    @extend .flex;
+    justify-content: space-between;
+    @include mq(md) {
+      width: 680px;
+    }
+  }
+  &__item {
+    margin: 0 auto;
+  }
+  &__text {
+    margin: 13px 0;
+  }
+  &__name {
+    margin: 10px 0;
+  }
+  &__img {
+    & > img {
+      object-fit: cover;
+      object-position: center;
+      max-width: 100%;
+      margin: 10px 0;
+      @include mq(md) {
+        max-width: 200px;
+      } 
+    }
+  }
+
+}
+
+.footer {
+  padding: 70px 0 15px 0;
+  &__copyright {
+    font-size: 12px;
+    text-align: center;
+  }
+}
+
+
